@@ -1,0 +1,4 @@
+logging:
+  level:
+    com.example.newsrecommendation.controllers: DEBUG
+    com.example.newsrecommendation.models: DEBUG
