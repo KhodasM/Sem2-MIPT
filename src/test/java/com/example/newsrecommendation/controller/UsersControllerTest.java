@@ -5,6 +5,9 @@ import com.example.newsrecommendation.models.user.*;
 import com.example.newsrecommendation.models.user.exception.EmailConflictException;
 import com.example.newsrecommendation.models.user.exception.UserAuthenticationException;
 import com.example.newsrecommendation.service.UsersService;
+import com.example.newsrecommendation.NewsRecommendationApplication;
+import com.example.newsrecommendation.security.SecurityConfig;
+import org.springframework.test.context.ContextConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -21,6 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(UserController.class)
+@ContextConfiguration(classes = {NewsRecommendationApplication.class, SecurityConfig.class})
 public class UsersControllerTest {
   @Autowired
   private MockMvc mockMvc;

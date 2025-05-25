@@ -25,6 +25,7 @@ public class UserController implements UserOperations{
     this.usersService = usersService;
   }
 
+  @PostMapping("/register")
   public ResponseEntity<User> register(@RequestBody UserRegisterRequest userRegisterRequest) throws EmailConflictException {
     User user = usersService.register(new User(new UserId(null), userRegisterRequest.email(), userRegisterRequest.password(), userRegisterRequest.username()));
     LOG.debug("User is registered");
