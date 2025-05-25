@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: newsrecommendation
+logging:
+  level:
+    com.example.newsrecommendation.controller: DEBUG
+    com.example.newsrecommendation.service: DEBUG
+    com.example.newsrecommendation.repository: DEBUG
+    com.example.newsrecommendation.security: DEBUG
+    com.example.newsrecommendation.aspect: DEBUG
+openapi: 3.0.1
+management:
+  endpoints:
+    web:
+      base-path: /admin/actuator
+      exposure:
+        include: "*"
+        exclude: shutdown
