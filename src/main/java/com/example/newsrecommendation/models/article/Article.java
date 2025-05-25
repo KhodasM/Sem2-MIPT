@@ -2,7 +2,6 @@ package com.example.newsrecommendation.models.article;
 
 
 import com.example.newsrecommendation.models.topic.TopicId;
-import com.example.newsrecommendation.models.user.UserId;
 import com.example.newsrecommendation.models.website.WebsiteId;
 
 import java.sql.Timestamp;
